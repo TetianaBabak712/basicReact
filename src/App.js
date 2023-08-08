@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import * as React from 'react';
 import './App.css';
 import Navigation from './components/Menu/Menu';
-import filmCard from './components/FilmCard/FilmCard'
+import FilmCard from './components/FilmCard/FilmCard';
 import { Grid } from '@mui/material';
 
 const mockData = [
@@ -42,7 +42,7 @@ function App() {
       <Grid container spacing={2} sx={{ padding: "15px" }}>
         {mockData.map(({ id, name, image, time }, index) => (
           <Grid item xs={3} key={index}>
-            <filmCard
+            <FilmCard
               id={id}
               onClick={handleClick}
               name={name}

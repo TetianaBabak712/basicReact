@@ -15,7 +15,7 @@ const blockStyle = {
     position: "absolute",
 };
 
-export default function filmCard ({
+export default function FilmCard ({
     id, 
     name, 
     time, 

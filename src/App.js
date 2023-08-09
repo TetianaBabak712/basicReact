@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import * as React from 'react';
 import './App.css';
 import Navigation from './components/Menu/Menu';
-import FilmCard from './components/FilmCard/FilmCard';
+import FilmCard from './components/FilmCard.jsx/FilmCard';
 import { Grid } from '@mui/material';
 
 const mockData = [
@@ -57,3 +57,4 @@ function App() {
 }
 
 export default App;
+

@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 
+
 const blockStyle = {
     width: "395px", 
     height: "222px",

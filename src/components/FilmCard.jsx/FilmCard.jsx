@@ -3,23 +3,17 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
+import {DEFAULT_IMAGE, DEFAULT_TITLE} from '../constants/constants'
 
 
-const blockStyle = {
-    width: "395px", 
-    height: "222px",
-    top: 0,
-    left: 0,
-    backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.80) 0%, rgba(20, 20, 20, 0.40) 50%, rgba(83, 100, 141, 0.00) 100%)",
-    position: "absolute",
-};
+  
 
 
 export default function FilmCard ({
     id, 
-    name, 
+    name = DEFAULT_TITLE, 
     time, 
-    image,
+    image = DEFAULT_IMAGE,
     onClick
 }) {
     const handleClick = (id) => {
@@ -35,7 +29,15 @@ export default function FilmCard ({
      }}
     >
       <CardMedia component="img" image={image} alt={name}/>
-      <Box sx={{blockStyle}}></Box>
+      <Box sx={{  
+        width: "395px", 
+        height: "222px",
+        top: 0,
+        left: 0,
+        backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.80) 0%, rgba(20, 20, 20, 0.40) 50%, rgba(83, 100, 141, 0.00) 100%)",
+        position: "absolute",
+        }}>
+        </Box>
         <Box sx={{
           position: "absolute",
           top: 70,

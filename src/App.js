@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import * as React from 'react';
 import './App.css';
@@ -33,12 +34,16 @@ const mockData = [
 ];
 
 function App() {
+  const [selectedFilm, setSelectedFilm] = useState(' ');
+  const [apiData, setApiData] = useState([]);
+
   const handleClick = (id) => {
-    console.log(`ID: {id}`);
+    setSelectedFilm(id);
   };
   return (
     <div className="App">
       <Navigation />
+      <h2>{selectedFilm}</h2>
       <Grid container spacing={2} sx={{ padding: "15px" }}>
         {mockData.map(({ id, name, image, time }, index) => (
           <Grid item xs={4} key={index}>

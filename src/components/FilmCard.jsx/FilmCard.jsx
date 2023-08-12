@@ -4,6 +4,7 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import {DEFAULT_IMAGE, DEFAULT_TITLE} from '../constants/constants'
+import axios from 'axios';
 
 
   

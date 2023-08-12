@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import * as React from 'react';
 import './App.css';
@@ -9,13 +10,13 @@ const mockData = [
   {
     id: 1,
     name: 'Home Alone',
-    image: "https://lumiere-a.akamaihd.net/v1/images/image_86dd5e23.jpeg?region=0,0,1800,776",
+    image: "https://www.etonline.com/sites/default/files/styles/max_970x546/public/images/2015-11/set_home_alone_640.jpg?h=7a6e80fd&itok=fGKRXgDX",
     time: '1hr: 50mins'
   },
   {
     id: 2,
     name: 'Black Adam',
-    image: "https://lrmonline.com/wp-content/uploads/2023/08/Black-Adam.jpg",
+    image: "https://www.darkmatterzine.com/wp-content/uploads/2022/12/Fbrr88CXwAAE0uf.jpeg",
     time: '2hr: 10mins'
   },
   {
@@ -27,21 +28,25 @@ const mockData = [
   {
     id: 4,
     name: 'Avengers',
-    image: "https://exputer.com/wp-content/uploads/2022/12/Marvels-Avengers.jpg",
+    image: "https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2023/02/27165533/Avengers-Endgame-Roster.jpg",
     time: '2hr:30mins'
   },
 ];
 
 function App() {
+  const [selectedFilm, setSelectedFilm] = useState(' ');
+  const [apiData, setApiData] = useState([]);
+
   const handleClick = (id) => {
-    console.log(`ID: {id}`);
+    setSelectedFilm(id);
   };
   return (
     <div className="App">
       <Navigation />
+      <h2>{selectedFilm}</h2>
       <Grid container spacing={2} sx={{ padding: "15px" }}>
         {mockData.map(({ id, name, image, time }, index) => (
-          <Grid item xs={3} key={index}>
+          <Grid item xs={4} key={index}>
             <FilmCard
               id={id}
               onClick={handleClick}

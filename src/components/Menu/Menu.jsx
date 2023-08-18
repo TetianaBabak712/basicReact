@@ -11,14 +11,15 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import logo from './logo.png'
-import { display } from '@mui/system';
-import { flexbox } from '@mui/system';
+import { NavLink } from 'react-router-dom';
+import './menuNavigation.css';
+import { MENU } from '../constants/constants';
 
 
 
-const pages = ['Home', 'Movies', 'TV Show'];
+
+const pages = ['Home', 'Films', 'TV Show'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
@@ -98,14 +99,8 @@ function Navigation() {
          
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'space-evenly' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
+            {MENU.map(({name, link}, index) => (
+              <NavLink key={index} className={({isActive}) => `navLink ${isActive ? "isActive" : ""}`} to={link}>{name}</NavLink>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>

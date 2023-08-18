@@ -4,9 +4,22 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import {DEFAULT_IMAGE, DEFAULT_TITLE} from '../constants/constants'
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
+const buttonStyle = {
+  textDecoration: "none",
+  border: "1px solid #E50914", 
+  background: "#E50914", 
+  width: "100px",
+  height: "30px",
+  color: "#fff",
+  fontSize: "12px",
+  borderRadius: 0,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+}
   
 
 
@@ -15,11 +28,9 @@ export default function FilmCard ({
     name = DEFAULT_TITLE, 
     time, 
     image = DEFAULT_IMAGE,
-    onClick
+    
 }) {
-    const handleClick = (id) => {
-        console.log(id);
-    };
+  
     
   return (
     <Card 
@@ -54,22 +65,9 @@ export default function FilmCard ({
           }}>
           <Typography sx={{fontSize: "20px"}}>{name}</Typography>
           <Typography sx={{fontSize: "20px"}}>{time}</Typography>
-          <Button sx={{
-              border: "1px solid #E50914", 
-              background: "#E50914", 
-              width: "100px",
-              height: "30px",
-              color: "#fff",
-              fontSize: "12px",
-              borderRadius: 0,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              }}
-              onClick={() => handleClick(id)}
-              >
+          <Link style={buttonStyle} to={`/films/${id}`}>
             Show more
-          </Button>
+          </Link>
         </Box>
         </Box>
     </Card>

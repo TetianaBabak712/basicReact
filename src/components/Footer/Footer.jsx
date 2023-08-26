@@ -4,7 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import "./footer.css"
-import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -14,12 +14,11 @@ import { NavLink } from 'react-router-dom';
     <footer 
       style={{
         backgroundColor: "#191919",
-        position: "absolute",
+        position: "fixed",
         left: 0,
         bottom: 0,
         width: "100%",
-        padding: "50px 0",
-        marginTop: "100px",
+        padding: "30px 0",
         }}>
 
         <div 
@@ -42,7 +41,7 @@ import { NavLink } from 'react-router-dom';
         <div>
           <p>Follow Us:</p>
           
-         <InstagramIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
+          <InstagramIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
           <FacebookIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
           <GoogleIcon className='icon' fontSize="large" style={{margin: "10px"}}/> 
           <GitHubIcon className='icon' fontSize="large" style={{margin: "10px"}}/>

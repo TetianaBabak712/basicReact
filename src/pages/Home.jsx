@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import * as React from 'react';
-import FilmCard from '../components/FilmCard.jsx/FilmCard';
+import FilmCard from '../components/FilmCard/FilmCard';
 import { Grid } from '@mui/material';
 import useRequest from '../hooks/useRequest';
 import { setSearch } from '../store/SearchSlice';

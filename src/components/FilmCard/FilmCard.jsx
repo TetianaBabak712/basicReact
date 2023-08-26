@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import { Button, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import {DEFAULT_IMAGE, DEFAULT_TITLE} from '../constants/constants'
+import {DEFAULT_IMAGE, DEFAULT_TITLE} from '../../constants/constants'
 import { Link } from 'react-router-dom';
 
 

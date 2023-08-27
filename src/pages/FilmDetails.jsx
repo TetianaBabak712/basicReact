@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../components/Header/Header";
 import { Grid } from "@mui/material";
 import Tags from "../components/Tags/Tags";
+import Tabs from "../components/TabsComponent/TabsComponent";
 
 function FilmDetails() {
     const {filmId} = useParams();
@@ -38,6 +39,7 @@ function FilmDetails() {
         runtime={runtime}
         />
         <Tags genres={genres}/>
+        <Tabs summary={summary} />
         </Grid>
         
      

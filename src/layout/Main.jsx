@@ -9,7 +9,7 @@ function Main() {
     return (
         <div className="App">
           <Navigation />
-          <Grid container >
+          <Grid container sx={{height: "100hv"}}>
             <Outlet />
           </Grid>
           <Footer />

@@ -26,7 +26,9 @@ function FilmDetails() {
     const { name, rating, genres, language, premiered, image, summary, runtime} = filmData;
 
     return (
-     
+
+     <>
+
      <Grid container>
         <Header 
         name={name}
@@ -38,11 +40,12 @@ function FilmDetails() {
         summary={summary}
         runtime={runtime}
         />
+
         <Tags genres={genres}/>
         <TabsComponent summary={summary} />
         </Grid>
-        
-     
+     </>
+
     )
 }
 

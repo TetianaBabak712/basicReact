@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header/Header";
 import { Grid } from "@mui/material";
-<<<<<<< HEAD
 import Tags from "../components/Tags/Tags";
-=======
->>>>>>> f4e99e1 (add header)
+import TabsComponent from "../components/TabsComponent/TabsComponent";
 
 function FilmDetails() {
     const {filmId} = useParams();
@@ -28,11 +26,9 @@ function FilmDetails() {
     const { name, rating, genres, language, premiered, image, summary, runtime} = filmData;
 
     return (
-<<<<<<< HEAD
-     
-=======
+
      <>
->>>>>>> f4e99e1 (add header)
+
      <Grid container>
         <Header 
         name={name}
@@ -44,15 +40,12 @@ function FilmDetails() {
         summary={summary}
         runtime={runtime}
         />
-<<<<<<< HEAD
+
         <Tags genres={genres}/>
-        </Grid>
-        
-     
-=======
+        <TabsComponent summary={summary} />
         </Grid>
      </>
->>>>>>> f4e99e1 (add header)
+
     )
 }
 

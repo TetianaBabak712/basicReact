@@ -8,6 +8,7 @@ import Auth from "./layout/Auth";
 import Register from "./pages/Auth/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,9 +39,18 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
+
         path: "register",
         element: <Register />,
       },
+        path: "/register",
+        element: <Register />,
+      },
+      // {
+      //   path: "/films",
+      //   element: <Films />,
+      // },
+
     ],
   },
 

@@ -4,7 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import "./footer.css"
-import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
     <footer 
       style={{
         backgroundColor: "#191919",
-        position: "absolute",
+        position: "relative",
         left: 0,
         bottom: 0,
         width: "100%",
@@ -33,7 +33,10 @@ import { NavLink } from 'react-router-dom';
           <a href='#!' className='textLink'>Watch List</a>
         </div>
      
-        <p>
+        <p 
+        style={{
+          margin: "20px 0"
+        }}>
           © 2021 STREAMIT. All Rights Reserved. All videos and shows on this platform are trademarks of, and all 
           related images and content are the property of, Streamit Inc. Duplication and copy of this strictly
           prohibited. All rights reserved.

@@ -13,13 +13,13 @@ import "./footer.css"
   return (
     <footer 
       style={{
-        backgroundColor: "#191919",
         position: "relative",
         left: 0,
         bottom: 0,
         width: "100%",
         padding: "50px 0",
         marginTop: "50px",
+
         }}>
 
         <div 
@@ -45,7 +45,7 @@ import "./footer.css"
         <div>
           <p>Follow Us:</p>
           
-         <InstagramIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
+          <InstagramIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
           <FacebookIcon className='icon' fontSize="large" style={{margin: "10px"}}/>
           <GoogleIcon className='icon' fontSize="large" style={{margin: "10px"}}/> 
           <GitHubIcon className='icon' fontSize="large" style={{margin: "10px"}}/>

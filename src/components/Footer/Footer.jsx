@@ -19,7 +19,7 @@ import "./footer.css"
         bottom: 0,
         width: "100%",
         padding: "50px 0",
-        marginTop: "100px",
+        marginTop: "50px",
         }}>
 
         <div 

@@ -13,12 +13,13 @@ import "./footer.css"
   return (
     <footer 
       style={{
-        backgroundColor: "#191919",
-        position: "fixed",
+        position: "relative",
         left: 0,
         bottom: 0,
         width: "100%",
-        padding: "30px 0",
+        padding: "50px 0",
+        marginTop: "50px",
+
         }}>
 
         <div 
@@ -32,7 +33,10 @@ import "./footer.css"
           <a href='#!' className='textLink'>Watch List</a>
         </div>
      
-        <p>
+        <p 
+        style={{
+          margin: "20px 0"
+        }}>
           © 2021 STREAMIT. All Rights Reserved. All videos and shows on this platform are trademarks of, and all 
           related images and content are the property of, Streamit Inc. Duplication and copy of this strictly
           prohibited. All rights reserved.

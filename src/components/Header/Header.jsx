@@ -23,11 +23,7 @@ function Header({ name, rating, genres=[], premiered, image, runtime, language }
     
       <div style={{ marginLeft: "0.2rem" }}>
         <div style={{ display: "flex", alignItems: "left", fontSize: "1em" }}>
-<<<<<<< HEAD
           <h1 style={{ color: "#fff", textTransform: "uppercase"}}>{name}</h1>
-=======
-          <h1 style={{ color: "rgba(228, 228, 228)", textTransform: "uppercase"}}>{name}</h1>
->>>>>>> f4e99e1 (add header)
           <p
             style={{
               display: "flex",
@@ -42,21 +38,13 @@ function Header({ name, rating, genres=[], premiered, image, runtime, language }
                   value={rating.average / 2}
                   max={5}
                   size="medium"
-<<<<<<< HEAD
                   style={{ color: "#D12E27", marginRight: "5px" }}
-=======
-                  style={{ color: "rgba(209, 46, 39)", marginRight: "5px" }}
->>>>>>> f4e99e1 (add header)
                   readOnly
                 />
                 <span
                   style={{
                     color: "#fff",
-<<<<<<< HEAD
                     fontSize: "15px",
-=======
-                    fontSize: "1em",
->>>>>>> f4e99e1 (add header)
                   }}
                 >
                   {rating.average.toFixed(1)}
@@ -68,11 +56,7 @@ function Header({ name, rating, genres=[], premiered, image, runtime, language }
         
           <p
             style={{
-<<<<<<< HEAD
               color: "#D12E27",
-=======
-              color: "rgb(182, 42,36)",
->>>>>>> f4e99e1 (add header)
               fontSize: "20px",
               margin: "0",
             }}
@@ -84,11 +68,7 @@ function Header({ name, rating, genres=[], premiered, image, runtime, language }
           <p
             style={{
               color: "#fff",
-<<<<<<< HEAD
               fontSize: "20px",
-=======
-              fontSize: "1.2em",
->>>>>>> f4e99e1 (add header)
             }}
           >
           {premiered} • {runtime} min • {language}</p>

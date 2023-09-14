@@ -28,8 +28,8 @@ function TabsComponent({summary}) {
     return (
         <>
         <ThemeProvider theme={theme}>
-        <TabContext value={value}>
-         <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
+        <TabContext value={value} >
+         <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%"}}>
             <TabList 
             onChange={handleChange} 
             aria-label="tabs description"  
@@ -42,7 +42,7 @@ function TabsComponent({summary}) {
             
             </TabList>
             </Box>
-            <TabPanel value="1">
+            <TabPanel value="1" >
             <div dangerouslySetInnerHTML={{__html: summary}} />
             </TabPanel>
             <TabPanel value="2">Item Two</TabPanel>

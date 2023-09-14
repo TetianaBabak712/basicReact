@@ -38,6 +38,7 @@ export default function FilmCard ({
         width: "395px", 
         height: "222px",
         position: "relative",
+        marginBottom: "100px"
      }}
     >
       <CardMedia component="img" image={image} alt={name}/>

@@ -5,6 +5,7 @@ import Header from "../components/Header/Header";
 import { Grid } from "@mui/material";
 import Tags from "../components/Tags/Tags";
 import TabsComponent from "../components/TabsComponent/TabsComponent";
+import StarringItem from "../components/StarringItem/StarringItem";
 
 function FilmDetails() {
     const {filmId} = useParams();
@@ -43,6 +44,7 @@ function FilmDetails() {
 
         <Tags genres={genres}/>
         <TabsComponent summary={summary} />
+        {/* <StarringItem showId={filmId} /> */}
         </Grid>
      </>
 

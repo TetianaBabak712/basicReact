@@ -13,6 +13,7 @@ import "./footer.css"
   return (
     <footer 
       style={{
+        backgroundColor: "#191919",
         position: "relative",
         left: 0,
         bottom: 0,

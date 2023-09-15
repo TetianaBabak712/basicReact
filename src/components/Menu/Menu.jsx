@@ -44,7 +44,7 @@ function Navigation() {
  
 
   return (
-    <AppBar position="static" sx={{backgroundColor: "black"}}>
+    <AppBar position="fixed" sx={{backgroundColor: "rgba(0, 0, 0, 0.8)", top: 0}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Avatar

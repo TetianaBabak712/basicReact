@@ -11,8 +11,11 @@ import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Tags from '../components/Tags/Tags';
 import { Link } from 'react-router-dom';
+
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
 
 
 
@@ -82,9 +85,42 @@ function Home() {
               className="mySwiper">
                   {topFilms.map((show, index) => (
                     <SwiperSlide style={{height:'100%'}} key={index}>
-                      <div className='description'>
-                        <h1 style={{textTransform:'uppercase', color:'#fff'}}>{show.name}</h1>
-                        <p
+
+                       <Card 
+                        sx={{   
+                        width: "100%", 
+                        height: "100hv",
+                        position: "relative",
+                        marginBottom: "100px"
+                        }}
+                      >
+                      <CardMedia component="img" image={show.image ? show.image.medium : ""} alt="" />
+                      <Box sx={{  
+                        width: "100%", 
+                        height: "100hv",
+                        top: 0,
+                        left: 0,
+                        backgroundImage: "linear-gradient(90deg, rgba(0, 0, 0, 0.80) 0%, rgba(20, 20, 20, 0.40) 50%, rgba(83, 100, 141, 0.00) 100%)",
+                        position: "absolute",
+                        }}>
+                        </Box>
+                        <Box sx={{
+                          position: "absolute",
+                          top: 300,
+                          left: 20,
+                          color: "#fff",
+                          }}
+                        >
+                        <Box sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "flex-start",
+                          gap: "5px",
+                          marginLeft: "25px"
+                          }}>
+                            
+                          <Typography sx={{textTransform:'uppercase', color:'#fff', fontWeight: "900", fontSize: "60px"}}>{show.name}</Typography>
+                          <Typography sx={{fontSize: "20px"}}><p
                           style={{
                           color: "#D12E27",
                           fontSize: "20px",
@@ -92,18 +128,26 @@ function Home() {
                           }}
                           >
                           {show.genres[0]}
-                        </p>
-                        <Tags genres={show.genres}/>
-                        <div dangerouslySetInnerHTML={{__html: show.summary}} /> 
-                        <Link style={buttonStyle} to={`/films/${show.id}`}>
-                          Show more
-                      </Link>
-                      </div>
-                    
-                      {show.image && show.image.original &&(
-                        <img src={show.image.original} alt="" />
-                      )}
-                      <image src={show.image ? show.image.medium : ""} />
+                        </p></Typography>
+                        <Typography sx={{ color: "#fff", fontSize: "20px" }}>
+                            <Box component="span" 
+                              sx={{ 
+                                color: "#D12E27",
+                                fontWeight: "900",
+                                fontSize: "20px"
+                              }}>
+                              TAGS :
+                            </Box>{" "}
+                            {show.genres && show.genres.join(" • ")}
+                          </Typography>
+                          <Typography sx={{fontSize: "20px", marginRight: "60px"}}> <span dangerouslySetInnerHTML={{__html: show.summary}} /> </Typography>
+                          <Link style={buttonStyle} to={`/films/${show.id}`}>
+                            Show more
+                          </Link>
+                        </Box>
+                        </Box>
+                    </Card>
+
                     </SwiperSlide> 
                   ))}
               

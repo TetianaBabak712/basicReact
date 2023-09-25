@@ -12,9 +12,10 @@ function Tags({genres}) {
           sx={{ 
             color: "#D12E27",
             fontWeight: "900",
-            fontSize: "20px"
+            fontSize: "20px",
+            textTransform: "uppercase",
             }}>
-            TAGS :
+            Tags :
           </Box>{" "}
           {genres && genres.join(" • ")}
         </Typography>

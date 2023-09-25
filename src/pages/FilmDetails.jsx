@@ -44,7 +44,7 @@ function FilmDetails() {
 
         <Tags genres={genres}/>
         <TabsComponent summary={summary} />
-        {/* <StarringItem showId={filmId} /> */}
+        <StarringItem showId={filmId} /> 
         </Grid>
      </>
 

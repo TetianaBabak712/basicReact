@@ -41,7 +41,7 @@ function Home() {
     const apiSearch = useSelector((state) => state.search.search);
     const actionFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Action');
     const comedyFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Comedy');
-    const topFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article')
+    const topFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article/popular');
     const apiData = useRequest(apiSearch);
     const searchRef = useRef("");
     const dispatch = useDispatch();
@@ -82,7 +82,7 @@ function Home() {
                   clickable: true,
                 }}
                 modules={[Autoplay, Pagination]}
-              className="mySwiper">
+              className="mySwiperTop">
                   {topFilms.map((show, index) => (
                     <SwiperSlide style={{height:'100%'}} key={index}>
 
@@ -91,10 +91,9 @@ function Home() {
                         width: "100%", 
                         height: "100hv",
                         position: "relative",
-                        marginBottom: "100px"
                         }}
                       >
-                      <CardMedia component="img" image={show.image ? show.image.medium : ""} alt="" />
+                      <CardMedia component="img" image={show.image ? show.image.original : ""} alt="" />
                       <Box sx={{  
                         width: "100%", 
                         height: "100hv",
@@ -158,7 +157,7 @@ function Home() {
         <Grid container>
         <Grid item xs={12}>
           <Typography
-            style={{ color: "#fff", marginLeft: "70px" }}
+            style={{ color: "#fff", marginLeft: "70px", marginTop: "100px"}}
             variant="h3"
           >
             Action shows

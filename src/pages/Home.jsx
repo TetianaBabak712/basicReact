@@ -104,8 +104,9 @@ function Home() {
                         }}>
                         </Box>
                         <Box sx={{
-                          position: "absolute",
-                          top: 300,
+                          width: "100%", 
+                          position: "fixed",
+                          top: 20,
                           left: 20,
                           color: "#fff",
                           }}

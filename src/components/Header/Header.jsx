@@ -18,6 +18,7 @@ function Header({ name, rating, genres=[], premiered, image, runtime, language }
         alignItems: "start",
         width: "100%",
         padding: "20px",
+        marginTop: "100px"
       }}
     >
     

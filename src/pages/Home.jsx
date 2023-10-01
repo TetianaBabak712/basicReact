@@ -6,7 +6,7 @@ import useRequest from '../hooks/useRequest';
 import { setSearch } from '../store/SearchSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import useRequestSwiper from '../hooks/useRequestSwipper';
+import useRequestSwiper from '../hooks/useRequestSwiper';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+
 
 
 
@@ -68,7 +69,6 @@ function Home() {
          style={{color:'#fff', backgroundColor: 'rgba(209, 208, 209, .6)', height: '30px', border: 'none',}}
          /> 
         </Grid>
-         
          
           <Grid item xs={12}>
             <Swiper  style={{margin:'0', paddingTop:'0', width:'100%', height: "100vh"}}

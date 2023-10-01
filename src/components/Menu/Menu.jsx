@@ -18,7 +18,7 @@ import { MENU } from '../../constants/constants';
 
 
 
-const pages = ['Home', 'Films', 'TV Show'];
+const pages = ['Home', 'TV Show'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 

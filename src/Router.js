@@ -1,7 +1,7 @@
 import Main from "./layout/Main";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
-import Films from "./pages/Films";
+import TVShow from "./pages/TVShow";
 import NotFound from "./pages/NotFound";
 import FilmDetails from "./pages/FilmDetails";
 import Auth from "./layout/Auth";
@@ -21,10 +21,10 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/films",
+        path: "/tvshows",
         element: (
           <PrivateRoute>
-            <Films />
+            <TVShow />
           </PrivateRoute>
         ),
       },

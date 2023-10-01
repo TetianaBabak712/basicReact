@@ -7,6 +7,7 @@ import FilmDetails from "./pages/FilmDetails";
 import Auth from "./layout/Auth";
 import Register from "./pages/Auth/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import ActorProfile from "./pages/ActorProfile";
 
 
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/films/:filmId",
         element: <FilmDetails />,
+      },
+      {
+        path: "/actor/:actorId",
+        element: <ActorProfile />,
       },
     ],
   },

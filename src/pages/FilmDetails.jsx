@@ -14,7 +14,7 @@ function FilmDetails() {
         async function getFilmData() {
             try {
                 const response = await axios.get(
-                    `https://api.tvmaze.com/shows/${filmId}`
+                    `https://dolphin-app-pc6ii.ondigitalocean.app/article/${filmId}`
                 );
                 setFilmData(response.data);
             } catch (error) {
@@ -23,8 +23,11 @@ function FilmDetails() {
         }
         getFilmData();
     }, [filmId]);
+    if (!filmData) {
+        return <div>Loading...</div>;
+      }
 
-    const { name, rating, genres, language, premiered, image, summary, runtime} = filmData;
+    const { name, rating, genres, language, premiered, image, summary, runtime, series} = filmData;
 
     return (
 
@@ -43,7 +46,12 @@ function FilmDetails() {
         />
 
         <Tags genres={genres}/>
-        <TabsComponent summary={summary} />
+        <TabsComponent 
+        summary={summary}
+        series={series}
+        rating={rating}
+        
+         />
         <StarringItem showId={filmId} /> 
         </Grid>
      </>

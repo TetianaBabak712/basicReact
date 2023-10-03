@@ -82,7 +82,7 @@ function TabsComponent({summary, series, rating}) {
                           <TableCell align="center" sx={{color: "#fff", fontSize: "18px"}}>
                           <Rating
                             name="half-rating-read"
-                            value={rating.average / 2}
+                            value={series.rating.average / 2}
                             max={5}
                             size="small"
                             style={{ color: "#D12E27", marginRight: "5px" }}
@@ -94,7 +94,7 @@ function TabsComponent({summary, series, rating}) {
                            fontSize: "20px",
                            }}
                           >
-                          {rating.average.toFixed(1)}
+                          {series.rating.average.toFixed(1)}
                           </span>
                         </TableCell>
                           

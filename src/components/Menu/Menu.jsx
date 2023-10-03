@@ -14,8 +14,9 @@ import logo from './logo.png'
 import { NavLink } from 'react-router-dom';
 import './menuNavigation.css';
 import { MENU } from '../../constants/constants';
-
-
+import { useDispatch, useSelector } from 'react-redux';
+import {  useEffect, useRef } from 'react';
+import { setSearch } from '../../store/SearchSlice';
 
 
 const pages = ['Home', 'TV Show'];
@@ -26,6 +27,21 @@ function Navigation() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
   
+    const apiSearch = useSelector((state) => state.search.search);
+    const searchRef = useRef("");
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+      searchRef.current.focus();
+    }, []);
+  
+  
+  
+    const handleSearch = (e) => {
+      dispatch(setSearch(e.target.value));
+    };
+    
+
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
     };
@@ -102,6 +118,12 @@ function Navigation() {
               <NavLink key={index} className={({isActive}) => `navLink ${isActive ? "isActive" : ""}`} to={link}>{name}</NavLink>
             ))}
           </Box>
+              <Box>
+              <input type='text' value={apiSearch} onChange={handleSearch} ref={searchRef} 
+              style={{color:'#fff', backgroundColor: 'rgba(209, 208, 209, .6)', width:"200px", height: '30px', border: 'none',marginRight: "25px"}}
+             /> 
+              </Box>
+
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

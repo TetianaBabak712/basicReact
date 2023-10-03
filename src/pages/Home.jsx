@@ -43,31 +43,31 @@ function Home() {
     const comedyFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article/byGenre/Comedy');
     const topFilms = useRequestSwiper('https://dolphin-app-pc6ii.ondigitalocean.app/article/popular');
     const apiData = useRequest(apiSearch);
-    const searchRef = useRef("");
-    const dispatch = useDispatch();
+    // const searchRef = useRef("");
+    // const dispatch = useDispatch();
     
 
     const handleClick = (id) => {
       setSelectedFilm(id);
     };
   
-    useEffect(() => {
-      searchRef.current.focus();
-    }, []);
+    // useEffect(() => {
+    //   searchRef.current.focus();
+    // }, []);
   
   
   
-    const handleSearch = (e) => {
-      dispatch(setSearch(e.target.value));
-    };
+    // const handleSearch = (e) => {
+    //   dispatch(setSearch(e.target.value));
+    // };
     
     return (
         <>
-        <Grid container pb={20} pt={10} sx={{display: 'flex', justifyContent: 'center'}}>
+        {/* <Grid container pb={20} pt={10} sx={{display: 'flex', justifyContent: 'center'}}>
          <input type='text' value={apiSearch} onChange={handleSearch} ref={searchRef} 
          style={{color:'#fff', backgroundColor: 'rgba(209, 208, 209, .6)', height: '30px', border: 'none',}}
          /> 
-        </Grid>
+        </Grid> */}
          
          
           <Grid item xs={12}>
